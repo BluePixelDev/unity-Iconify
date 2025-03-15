@@ -1,0 +1,13 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <Style src="project://database/Assets/Iconify/IconifyUI_USS.uss?fileID=7433441132597879392&amp;guid=3fd4cf60d6207a843a7d41e14a10b22a&amp;type=3#IconifyUI_USS" />
+    <engine:VisualElement name="IconifyRoot" style="flex-grow: 1;">
+        <engine:Label text="Iconify" style="font-size: 24px; -unity-text-align: upper-center; -unity-font-style: normal;" />
+        <engine:Toggle label="Enable Icons" binding-path="enableIcons" />
+        <engine:GroupBox>
+            <engine:VisualElement style="flex-grow: 0; height: auto; background-color: rgba(0, 0, 0, 0.25); border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-left-color: rgba(0, 0, 0, 0.25); border-right-color: rgba(0, 0, 0, 0.25); border-top-color: rgba(0, 0, 0, 0.25); border-bottom-color: rgba(0, 0, 0, 0.25); padding-top: 1px; padding-right: 1px; padding-bottom: 1px; padding-left: 1px;">
+                <engine:Label text="Folder Options" style="-unity-font-style: bold; font-size: 16px;" />
+            </engine:VisualElement>
+            <engine:ListView show-add-remove-footer="true" reorderable="true" virtualization-method="DynamicHeight" binding-path="options" header-title=" " show-border="true" show-bound-collection-size="false" enabled="true" item-template="project://database/Assets/Iconify/IconifyUI_Item.uxml?fileID=9197481963319205126&amp;guid=f19c8e04606864747abda18ad5a13a4e&amp;type=3#IconifyUI_Item" name="FolderOptions" />
+        </engine:GroupBox>
+    </engine:VisualElement>
+</engine:UXML>

@@ -1,0 +1,23 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <Style src="project://database/Assets/Iconify/Editor/IconifyUI_USS.uss?fileID=7433441132597879392&amp;guid=3fd4cf60d6207a843a7d41e14a10b22a&amp;type=3#IconifyUI_USS" />
+    <engine:VisualElement style="flex-grow: 0; flex-direction: row; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0;">
+        <engine:VisualElement name="Handle" style="flex-grow: 0; align-items: center; justify-content: flex-end; flex-direction: column-reverse; border-right-width: 2px; border-left-color: rgba(0, 0, 0, 0.25); border-right-color: rgba(0, 0, 0, 0.25); border-top-color: rgba(0, 0, 0, 0.25); border-bottom-color: rgba(0, 0, 0, 0.25); padding-top: 5px; padding-left: 5px; padding-right: 5px;">
+            <engine:VisualElement class="reaorderable_dot" />
+            <engine:VisualElement class="reaorderable_dot" />
+        </engine:VisualElement>
+        <engine:VisualElement name="Left" style="flex-grow: 1; margin-right: 14px; justify-content: flex-start; margin-top: 10px; padding-bottom: 10px; margin-left: 5px;">
+            <engine:EnumField value="Center" type="BP.Iconify.FolderMatchMode, BP.Iconify" name="ModeField" />
+            <editor:ObjectField allow-scene-objects="false" type="UnityEditor.DefaultAsset, UnityEditor.CoreModule" name="AssetField" />
+            <engine:TextField placeholder-text="Name (Pattern)" name="NameField" />
+        </engine:VisualElement>
+        <engine:VisualElement name="Right" style="flex-grow: 0; margin-top: 10px; padding-right: 10px; padding-bottom: 10px;">
+            <engine:VisualElement name="TextureBox" style="flex-grow: 1; width: 60px; height: 60px;">
+                <editor:ObjectField value="project://database/Resources/unity_builtin_extra?fileID=10309&amp;guid=0000000000000000f000000000000000&amp;type=0#Default-Checker-Gray" name="Select" type="UnityEngine.Texture2D, UnityEngine.CoreModule" style="flex-grow: 1; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; opacity: 0;" />
+                <engine:VisualElement name="Preview" picking-mode="Ignore" style="flex-grow: 1; width: 100%; height: 100%; border-left-color: rgba(0, 0, 0, 0.49); border-right-color: rgba(0, 0, 0, 0.49); border-top-color: rgba(0, 0, 0, 0.49); border-bottom-color: rgba(0, 0, 0, 0.49); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px; position: absolute; background-color: rgba(0, 0, 0, 0.1); margin-bottom: 10px;" />
+                <engine:VisualElement picking-mode="Ignore" name="Label" style="flex-grow: 1; position: absolute; right: 0; bottom: 0; background-color: rgb(41, 41, 41); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px; border-left-color: rgba(0, 0, 0, 0.26); border-right-color: rgba(0, 0, 0, 0.26); border-top-color: rgba(0, 0, 0, 0.26); border-bottom-color: rgba(0, 0, 0, 0.26);">
+                    <engine:Label text="Select" style="font-size: 8px; margin-top: 1px; margin-right: 1px; margin-bottom: 1px; margin-left: 1px;" />
+                </engine:VisualElement>
+            </engine:VisualElement>
+        </engine:VisualElement>
+    </engine:VisualElement>
+</engine:UXML>
