@@ -10,10 +10,26 @@ public static class Iconify
 {
     private const string AssetPath = "Assets/IconifySettings.asset";
 
-    // Accessor for settings with lazy initialization
-    private static IconifySettings Settings => GetOrCreateSettings();
     private static IconifySettings settings;
-    private static readonly Texture2D coverTexture;
+    private static Texture2D coverTexture;
+
+    // Accessors
+    private static IconifySettings Settings => GetOrCreateSettings();
+    private static Texture2D CoverTexture
+    {
+        get
+        {
+            if (coverTexture == null)
+            {
+                // Initialize cover texture for background
+                coverTexture = new Texture2D(1, 1);
+                coverTexture.SetPixel(0, 0, Color.white);
+                coverTexture.Apply();
+            }
+
+            return coverTexture;
+        }
+    }
 
     // Static constructor to initialize the icon handler
     static Iconify()
@@ -21,11 +37,6 @@ public static class Iconify
         GetOrCreateSettings();
         EditorApplication.projectWindowItemOnGUI -= HandleItemGUI;
         EditorApplication.projectWindowItemOnGUI += HandleItemGUI;
-
-        // Initialize cover texture for background
-        coverTexture = new Texture2D(1, 1);
-        coverTexture.SetPixel(0, 0, Color.white);
-        coverTexture.Apply();
     }
 
     /// <summary>
@@ -98,7 +109,7 @@ public static class Iconify
         /*==== RENDERING ====*/
         // Cover Texture
         GUI.color = backgroundColor;
-        GUI.DrawTexture(iconRect, coverTexture);
+        GUI.DrawTexture(iconRect, CoverTexture);
         GUI.color = Color.white;
 
         GUI.DrawTexture(iconRect, folderIcon, ScaleMode.ScaleAndCrop);
