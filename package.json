@@ -9,9 +9,7 @@
         "email": "bluepixeldev@gmail.com",
         "url": "https://github.com/BluePixelDev"
     },
-    "dependencies": {
-        "com.bp.iconify": "file:"
-    },
+    "dependencies": {},
     "keywords": [
         "unity",
         "editor",
