@@ -3,15 +3,13 @@
     "version": "0.1.0",
     "displayName": "Iconify",
     "description": "A Unity Editor extension for customizing folder icons in the project window.",
-    "unity": "6000.0.41f",
+    "unity": "6000.0",
     "author": {
         "name": "Bluepixel",
         "email": "bluepixeldev@gmail.com",
         "url": "https://github.com/BluePixelDev"
     },
-    "dependencies": {
-        "com.bp.iconify": "file:"
-    },
+    "dependencies": {},
     "keywords": [
         "unity",
         "editor",
